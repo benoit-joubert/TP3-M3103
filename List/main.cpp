@@ -37,11 +37,10 @@ void ListeSimpleV2 ()
     cout << "ListeSimpleV2 : \n\n";
 
     CList<int> AList;
-
     // Le dernier element cree est toujours le premier de la liste
 
-    for (unsigned i = 20; i; i -= 2) AList.AddAfter (AList.Begin (), i);
-    cout << "hfejkrhg " << endl;
+    for (unsigned i = 20; i; i -= 2) AList.AddAfter(AList.Begin (), i);
+    cout << "Passed!" << endl;
 
     for (unsigned i (0); i < 5; ) {
         AList.push_front (i++);
@@ -51,8 +50,7 @@ void ListeSimpleV2 ()
 
     AList.Show ();
 //	AList.Show ();
-    int i;
-    cin >>i;
+    int i = 14;
     std::shared_ptr<CNode<int>> ptr = AList.Find (i);
     cout << ((ptr != NULL)?  " " : "non ") << "trouve" << endl;
     if (ptr != nullptr){
